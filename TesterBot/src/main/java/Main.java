@@ -143,7 +143,7 @@ public class Main extends ListenerAdapter {
                     try {
                         VoiceChannel vc = Objects.requireNonNull(Objects.requireNonNull(event.getMember()).getVoiceState()).getChannel();
                         if (vc != null) {
-                            List<Member> membersInVc = vc.getManager().getChannel().getMembers();
+                            List<Member> membersInVc = vc.getMembers();
 
                             addPlayer(membersInVc);
                             channel.sendMessage("```Added all players in " + vc.getName() + "```").queue();
